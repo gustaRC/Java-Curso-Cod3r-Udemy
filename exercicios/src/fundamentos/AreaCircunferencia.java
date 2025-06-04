@@ -8,7 +8,7 @@ public class AreaCircunferencia {
 		double raio = 3.4;
 		
 		//CONSTANTE: final tipoVariavel nomeVariavel = valorVariavel;
-		final double PI = 3.14; //Nome de contante TOTALMENTE MAIÚSCULO 
+		final double PI = 3.14; //Nome de constantes TOTALMENTE MAIÚSCULO 
 		
 		double area = PI * raio * raio;
 		System.out.println("Primeira Área: " + area + "m2");
