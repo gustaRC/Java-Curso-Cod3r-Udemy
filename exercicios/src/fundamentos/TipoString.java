@@ -51,7 +51,7 @@ public class TipoString {
 				"\nSobrenome: " + sobrenome +
 				"\nIdade: " + idade +
 				"\nSalario: " + salario + "\n");
-			
+		
 		//Formatação
 		/*
 		 * s% = string
