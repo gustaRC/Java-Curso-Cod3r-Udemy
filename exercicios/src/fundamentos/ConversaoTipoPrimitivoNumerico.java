@@ -24,7 +24,7 @@ public class ConversaoTipoPrimitivoNumerico {
 		
 		
 		int c = 128; //número não suportado pelo byte
-//		byte d_byte = c; //ERRO
+//		byte d_byte = c; //ERRO - necessário conversão
 		byte d_byte = (byte) c;
 		System.out.println("int -> byte: " + d_byte); //foi para o "proximo" numero do range, 127 (NUM LIMITE) foi para -128 (NUM MIN LIMITE)
 	}
