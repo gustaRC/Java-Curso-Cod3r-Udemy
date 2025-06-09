@@ -13,8 +13,8 @@ public class ConversaoStringParaNumero {
 
 		System.out.println(valor1 + valor2); // será concatenado por ser 2 strings
 
-		double numero1 = Double.parseDouble(valor1);
-		double numero2 = Double.parseDouble(valor2);
+		double numero1 = Double.parseDouble(valor1); //parseInt, parseLong, etc
+		double numero2 = Double.parseDouble(valor2); 
 
 		double soma = numero1 + numero2;
 		System.out.println("Soma: " + soma);
