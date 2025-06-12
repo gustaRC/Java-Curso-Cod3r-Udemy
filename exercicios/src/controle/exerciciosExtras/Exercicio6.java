@@ -11,7 +11,7 @@ public class Exercicio6 {
 		final int valorAleatorio = 50;
 		int valorDigitado = 0;
 
-		System.out.println("--- Iniciado Aplicação --- Adivinhe o número aleátorio (0 - 100)");
+		System.out.println("--- Iniciado Aplicação - Adivinhe o número aleátorio de 0 a 100 ---");
 		for (int i = 10; i > 0; i--) {
 			System.out.printf("\nRestam %d tentativas.", i);
 
