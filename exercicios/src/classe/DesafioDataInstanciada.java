@@ -14,10 +14,10 @@ public class DesafioDataInstanciada {
 		data2.mes = 05;
 		data2.ano = 2013;
 		
-		System.out.printf("Data 1: %d/%d/%d", 
-				data1.dia, data1.mes, data1.ano);
+		System.out.printf("Data 1: %s", 
+				data1.obterDataFormatada());
 		
-		System.out.printf("\nData 2: %d/%d/%d", 
-				data2.dia, data2.mes, data2.ano);
+		System.out.printf("\nData 2: %s", 
+				data2.obterDataFormatada());
 	}
 }
