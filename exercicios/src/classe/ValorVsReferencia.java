@@ -22,8 +22,9 @@ public class ValorVsReferencia {
 		System.out.println(d2.obterDataFormatada());
 
 		int c = 5;
-		alterarPrimitivo(c); //valor continuara 5
-		//a referencia de memoria da variavel c é diferente do parametro alterado na função
+		alterarPrimitivo(c); // valor continuara 5
+		// a referencia de memoria da variavel c é diferente do parametro alterado na
+		// função
 		System.out.println(c);
 	}
 
