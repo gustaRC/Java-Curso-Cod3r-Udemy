@@ -37,13 +37,13 @@ public class ConjuntoBaguncado {
 		nums.add(1);
 		nums.add(2);
 		nums.add(3);
-		
+
 		System.out.println(nums);
-		
-		conjunto.addAll(nums); //União entre dois conjuntos
+
+		conjunto.addAll(nums); // União entre dois conjuntos
 		System.out.println(conjunto);
-		
-		conjunto.retainAll(nums); //Interseção, o que tem em um e no outro
+
+		conjunto.retainAll(nums); // Interseção, o que tem em um e no outro
 		System.out.println(conjunto);
 	}
 }
