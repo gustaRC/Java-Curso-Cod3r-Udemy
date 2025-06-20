@@ -43,6 +43,5 @@ public class Mapa {
 
 		System.out.println(usuarios.remove(1));
 		System.out.println(usuarios.remove(4, "Gui")); // não removerá pois não existe e retornará false
-
 	}
 }
