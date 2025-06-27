@@ -18,4 +18,14 @@ public class Compra {
 			this.itens.add(item);
 		}
 	}
+
+	double obterValorTotal() {
+		double total = 0;
+
+		for (Item item : itens) {
+			total += item.valorTotal();
+		}
+
+		return total;
+	}
 }

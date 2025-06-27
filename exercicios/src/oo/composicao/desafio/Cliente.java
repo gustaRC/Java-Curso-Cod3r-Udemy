@@ -20,9 +20,7 @@ public class Cliente {
 		double gastoTotal = 0;
 
 		for (Compra compra : compras) {
-			for (Item item : compra.itens) {
-				gastoTotal += item.valorTotal();
-			}
+			gastoTotal += compra.obterValorTotal();
 		}
 
 		return gastoTotal;
