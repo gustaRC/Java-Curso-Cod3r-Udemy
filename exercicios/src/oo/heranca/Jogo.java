@@ -8,9 +8,7 @@ public class Jogo {
 		monstro.x = 10;
 		monstro.y = 11;
 
-		Jogador heroi = new Heroi();
-		heroi.x = 10;
-		heroi.y = 10;
+		Jogador heroi = new Heroi(10, 10);
 
 //		System.out.println("X (Leste/Oeste): " + j1.x);
 //		System.out.println("Y (Norte/Sul): " + j1.y);
