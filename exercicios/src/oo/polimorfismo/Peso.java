@@ -1,6 +1,6 @@
 package oo.polimorfismo;
 
-public class Peso {
+public abstract class Peso {
 
 	private double peso;
 
