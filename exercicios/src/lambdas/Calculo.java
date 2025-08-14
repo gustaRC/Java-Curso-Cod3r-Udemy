@@ -1,5 +1,6 @@
 package lambdas;
 
+@FunctionalInterface
 public interface Calculo {
 
 //	public e abstract não são obrigatorios, pois implicitamente
