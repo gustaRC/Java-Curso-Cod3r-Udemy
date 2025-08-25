@@ -6,6 +6,7 @@ public class CalculoTeste3 {
 
 	public static void main(String[] args) {
 
+//		Recebe um tipo e retorna esse mesmo tipo
 		BinaryOperator<Double> calculo = (x, y) -> {
 			return x + y;
 		};
