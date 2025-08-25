@@ -6,6 +6,7 @@ public class PredicadoComposicao {
 
 	public static void main(String[] args) {
 
+//		Recebe um único paramêtro e retorna boolena
 		Predicate<Integer> isPar = num -> num % 2 == 0;
 		Predicate<Integer> isTresDigitos = num -> num >= 100 && num <= 999;
 
