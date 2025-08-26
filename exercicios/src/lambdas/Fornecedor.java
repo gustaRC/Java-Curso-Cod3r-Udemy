@@ -11,7 +11,7 @@ public class Fornecedor {
 //		Não recebe nenhum parametro e retorna alguma coisa
 //		Define o valor de retorno 
 		Supplier<List<String>> umaLista = () -> Arrays.asList("Gu", "Gui", "Go");
-		
+
 		System.out.println(umaLista.get());
 	}
 }
