@@ -3,7 +3,7 @@ package oo.composicao.desafio;
 public class DesafioComposicao {
 
 	public static void main(String[] args) {
-
+		
 		Cliente c1 = new Cliente("Maria");
 
 		Produto prod1 = new Produto("Feijão 1kg", 9.90);
@@ -31,6 +31,10 @@ public class DesafioComposicao {
 		c1.adicionarCompra(compra1);
 		c1.adicionarCompra(compra2);
 
+//		System.out.println(c1.compras.get(0).cliente.nome);
+//		System.out.println(c1.nome);
+//		MESMO RETORNO
+		
 		System.out.println("Historico de Compras - Cliente " + c1.nome);
 		for (int i = 0; i < c1.compras.size(); i++) {
 			System.out.println("- Compra " + (i + 1) + " (" + c1.compras.get(i).cliente.nome + ")");

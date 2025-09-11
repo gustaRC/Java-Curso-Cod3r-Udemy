@@ -8,6 +8,7 @@ public class TipoStringEquals {
 
 		String s = new String("2");
 		String s2 = "2";
+		
 		System.out.println("2" == s); // == false
 		System.out.println(s2 == s); // == false
 		// Prefira utilizar equals para String, ao inves do ==

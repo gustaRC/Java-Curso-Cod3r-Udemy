@@ -11,6 +11,7 @@ public class Cliente {
 		this.nome = nome;
 	}
 
+//	set indireto
 	void adicionarCompra(Compra compra) {
 		compra.cliente = this;
 		compras.add(compra);

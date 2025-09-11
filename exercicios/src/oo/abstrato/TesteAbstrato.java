@@ -4,6 +4,8 @@ public class TesteAbstrato {
 
 	public static void main(String[] args) {
 		
+//		Animal beta = new Animal(); ERRO
+		
 		System.out.println("Tipo Animal:");
 		Animal a = new Cachorro();
 		System.out.println(a.respirar());

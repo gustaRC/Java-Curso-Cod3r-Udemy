@@ -13,5 +13,9 @@ public class Hash {
 		usuarios.add(new Usuario("Guilherme"));
 
 		System.out.println(usuarios.contains(new Usuario("Guilherme")));
+		System.out.println(new Usuario("Guilherme"));
+		
+		Usuario user1 = new Usuario("Ana");
+		System.out.println(user1.equals(new Usuario("Ana")));
 	}
 }

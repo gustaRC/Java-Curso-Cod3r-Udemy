@@ -7,11 +7,13 @@ public class Compra {
 	ArrayList<Item> itens = new ArrayList<Item>();
 	Cliente cliente;
 
+//	set indireto
 	void adicionarItem(Item item) {
 		item.compra = this;
 		this.itens.add(item);
 	}
-
+	
+//	set indireto
 	void adicionarItens(Item[] itens) {
 		for (Item item : itens) {
 			item.compra = this;
