@@ -33,6 +33,8 @@ public class CriandoStreams {
 //		Stream.generate(() -> "a").forEach(print);
 
 //		Forma 6 - geração infinita com ordenação
-		Stream.iterate(0, n -> n + 1).forEach(println);		
+		Stream.iterate(0, n -> n + 1).forEach(println);
+		
+//		Foreach é uma operação terminaria, pois ela não retorna nada!
 	}
 }
