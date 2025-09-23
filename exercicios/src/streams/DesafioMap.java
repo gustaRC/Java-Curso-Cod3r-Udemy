@@ -44,6 +44,7 @@ public class DesafioMap {
 		System.out.println("Manipulado");
 		nums.stream()
 			.map(intParaBinario)
+//			.map(Integer::toBinaryString)
 			.map(inverter)
 			.map(binarioParaInt)
 			.forEach(Utilitarios.println);
