@@ -7,6 +7,7 @@ import java.util.List;
 public class MinMax {
 	
 	public static void main(String[] args) {
+		
 		Aluno a1 = new Aluno("Ana", 7.1);
 		Aluno a2 = new Aluno("Lucas", 6.2); // reprovado
 		Aluno a3 = new Aluno("Fabricio", 8.9);
