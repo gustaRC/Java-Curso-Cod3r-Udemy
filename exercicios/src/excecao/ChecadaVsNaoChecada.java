@@ -5,7 +5,7 @@ public class ChecadaVsNaoChecada {
 	public static void main(String[] args) {
 
 		try {
-			geraErro1();
+			geraErro1(); // exceção NÃO tratada - NÃO obrigatorio seu tratamento (try/catch) pelo compilador
 		} catch (RuntimeException e) {
 			System.out.println(e.getMessage());
 		}
@@ -29,7 +29,8 @@ public class ChecadaVsNaoChecada {
 
 //	Exceçao checada ou verificada.
 //	O 'throws Exception' é como se estivessemos 
-//	dizendo que este método não se responsabiliza tratamento do erro
+//	dizendo que este método não se responsabiliza tratamento do erro.
+//	Obrigando assim seu tratamento no método que o engloba
 	static void geraErro2() throws Exception {
 		throw new Exception("Ocorreu um erro! #02");
 	}
