@@ -25,9 +25,9 @@ replay_pid*
 
 # Eclipse-specific ignores
 .metadata/
-*.classpath
-*.project
-*.settings/
+!.classpath
+!.project
+!.settings/
 
 # Build output
 /bin/
