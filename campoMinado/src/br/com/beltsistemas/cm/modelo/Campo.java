@@ -3,6 +3,8 @@ package br.com.beltsistemas.cm.modelo;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.com.beltsistemas.cm.excecao.ExplocaoException;
+
 public class Campo {
 
 	private final int linha;
@@ -14,12 +16,12 @@ public class Campo {
 
 	private List<Campo> vizinhos = new ArrayList<Campo>();
 
-	public Campo(int linha, int coluna) {
+	Campo(int linha, int coluna) {
 		this.linha = linha;
 		this.coluna = coluna;
 	}
 
-	public boolean adicionarVizinho(Campo vizinho) {
+	boolean adicionarVizinho(Campo vizinho) {
 		boolean linhaDiferente = linha != vizinho.linha;
 		boolean colunaDiferente = coluna != vizinho.coluna;
 		boolean diagonal = linhaDiferente && colunaDiferente;
@@ -34,6 +36,38 @@ public class Campo {
 		} else {
 			return false;
 		}
+	}
+
+	void alternarMarcacao() {
+		if (!aberto) {
+			marcado = !marcado;
+		}
+	}
+
+	boolean abrir() {
+
+		if (!aberto && !marcado) {
+			aberto = true;
+
+			if (minado) {
+				throw new ExplocaoException();
+			}
+
+			if (vizinhancaSegura()) {
+				vizinhos.forEach(v -> v.abrir());
+			}
+
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	boolean vizinhancaSegura() {
+		System.out.println(vizinhos.stream().noneMatch(v -> v.minado));
+		//se nenhum vizinho der um match no predicado (ou seja, se minado for true, logo se estiver minado) retornará 'true'
+		//caso algum vizinho esteja minado, retornará 'false'
+		return vizinhos.stream().noneMatch(v -> v.minado); //noneMatch === nenhum bateu, nenhum item atendeu os requisitos ? true : false
 	}
 
 }
