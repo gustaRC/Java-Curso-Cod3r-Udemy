@@ -22,6 +22,20 @@ public class Tabuleiro {
 		sortearMinas();
 	}
 
+	public void abrir(int linha, int coluna) {
+		campos.parallelStream()
+			.filter(c -> (c.getLinha() == linha) && (c.getColuna() == coluna))
+			.findFirst() //== operação finalizadora de stream
+			.ifPresent(c -> c.abrir());
+	}
+	
+	public void alternarMarcacao(int linha, int coluna) {
+		campos.parallelStream()
+		.filter(c -> (c.getLinha() == linha) && (c.getColuna() == coluna))
+		.findFirst() //== operação finalizadora de stream
+		.ifPresent(c -> c.alternarMarcacao());
+	}
+
 	private void gerarCampos() {
 		for (int linha = 0; linha < linhas; linha++) {
 			for (int coluna = 0; coluna < colunas; coluna++) {
@@ -57,6 +71,31 @@ public class Tabuleiro {
 	public void reiniciar() {
 		campos.stream().forEach(c -> c.reiniciar());
 		sortearMinas();
+	}
+
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+
+	    sb.append("  "); // espaço para alinhar com o "L0"
+	    for (int coluna = 0; coluna < colunas; coluna++) {
+	        sb.append("  C").append(coluna).append(" ");
+	    }
+	    sb.append("\n");
+		
+		int i = 0;
+		for (int linha = 0; linha < linhas; linha++) {
+			sb.append("L").append(linha);
+			for (int coluna = 0; coluna < colunas; coluna++) {
+				sb.append(" ");
+				sb.append("|" + campos.get(i) + "|");
+				sb.append(" ");
+				i++;
+			}
+
+			sb.append("\n");
+		}
+
+		return sb.toString();
 	}
 
 }
