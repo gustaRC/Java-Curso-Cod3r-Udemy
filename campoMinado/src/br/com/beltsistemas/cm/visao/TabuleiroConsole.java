@@ -64,9 +64,11 @@ public class TabuleiroConsole {
 				}
 			}
 			
+			System.out.println(tabuleiro);
 			System.out.println("Você ganhou!");
 		} catch (ExplocaoException e) {
-			System.out.println("Você perdeu!");
+			System.out.println("\n-> Você perdeu!\nVeja as localizações do Campo Minado:");
+			System.out.println(tabuleiro);
 		}
 	}
 	

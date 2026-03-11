@@ -6,7 +6,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import br.com.beltsistemas.cm.excecao.ExplocaoException;
-import br.com.beltsistemas.cm.modelo.Campo;
 
 class CampoTeste {
 
