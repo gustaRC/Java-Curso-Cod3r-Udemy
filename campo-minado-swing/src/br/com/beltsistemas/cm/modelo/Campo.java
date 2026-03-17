@@ -2,6 +2,7 @@ package br.com.beltsistemas.cm.modelo;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.BiConsumer;
 
 public class Campo {
 
@@ -13,10 +14,23 @@ public class Campo {
 	private boolean marcado = false;
 
 	private List<Campo> vizinhos = new ArrayList<Campo>();
+//	para evitar duplicações podemos usar o Set, juntamente do LinkedHashSet para que ele respeite a ordem de inserção
+	private List<CampoObservador> observadores = new ArrayList<CampoObservador>();
+//	podemos usar a interface já criada: BIConsumer que tem o mesmo comportamento da interface CampoObservador
+//	ou seja, tem um método que recebe 2 parametros e retorna void
+//	private List<BiConsumer<Campo, CampoObservador>> observadores = new ArrayList<>();
 
 	Campo(int linha, int coluna) {
 		this.linha = linha;
 		this.coluna = coluna;
+	}
+	
+	public void registrarObservador(CampoObservador observador) {
+		observadores.add(observador);
+	}
+	
+	private void notificarObservadores(CampoEvento evento) {
+		observadores.stream().forEach(o -> o.eventoOcorreu(this, evento));
 	}
 
 	boolean adicionarVizinho(Campo vizinho) {
@@ -39,18 +53,25 @@ public class Campo {
 	void alternarMarcacao() {
 		if (!aberto) {
 			marcado = !marcado;
+			
+			if(marcado) {
+				notificarObservadores(CampoEvento.MARCAR);
+			} else {
+				notificarObservadores(CampoEvento.DESMASCAR);				
+			}
 		}
 	}
 
 	boolean abrir() {
 		if (!aberto && !marcado) {
-			aberto = true;
-
 			if (minado) {
-				// TODO Implementar nova versão
+				notificarObservadores(CampoEvento.EXPLODIR);
+				return true;
 				// 'todo' ou 'fixme' em maisculos, o Eclipse/IDE vai identificar como TASKS para serem feita.
 				// ou seja, é somente ir na aba Tasks da IDE que vai estár essa informação
 			}
+			
+			setAberto(true);
 
 			if (vizinhancaSegura()) {
 				vizinhos.forEach(v -> v.abrir());
@@ -84,6 +105,10 @@ public class Campo {
 	
 	void setAberto(boolean aberto) {
 		this.aberto = aberto;
+		
+		if (aberto) {
+			notificarObservadores(CampoEvento.ABRIR);			
+		}
 	}
 
 	public boolean isAberto() {
