@@ -2,7 +2,6 @@ package br.com.beltsistemas.cm.modelo;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.BiConsumer;
 
 public class Campo {
 
@@ -24,11 +23,11 @@ public class Campo {
 		this.linha = linha;
 		this.coluna = coluna;
 	}
-	
+
 	public void registrarObservador(CampoObservador observador) {
 		observadores.add(observador);
 	}
-	
+
 	private void notificarObservadores(CampoEvento evento) {
 		observadores.stream().forEach(o -> o.eventoOcorreu(this, evento));
 	}
@@ -50,27 +49,28 @@ public class Campo {
 		}
 	}
 
-	void alternarMarcacao() {
+	public void alternarMarcacao() {
 		if (!aberto) {
 			marcado = !marcado;
-			
-			if(marcado) {
+
+			if (marcado) {
 				notificarObservadores(CampoEvento.MARCAR);
 			} else {
-				notificarObservadores(CampoEvento.DESMASCAR);				
+				notificarObservadores(CampoEvento.DESMASCAR);
 			}
 		}
 	}
 
-	boolean abrir() {
+	public boolean abrir() {
 		if (!aberto && !marcado) {
 			if (minado) {
 				notificarObservadores(CampoEvento.EXPLODIR);
 				return true;
-				// 'todo' ou 'fixme' em maisculos, o Eclipse/IDE vai identificar como TASKS para serem feita.
+				// 'todo' ou 'fixme' em maisculos, o Eclipse/IDE vai identificar como TASKS para
+				// serem feita.
 				// ou seja, é somente ir na aba Tasks da IDE que vai estár essa informação
 			}
-			
+
 			setAberto(true);
 
 			if (vizinhancaSegura()) {
@@ -83,38 +83,39 @@ public class Campo {
 		}
 	}
 
-	boolean vizinhancaSegura() {
-		//System.out.println(vizinhos.stream().noneMatch(v -> v.minado));
-		//se nenhum vizinho der um match no predicado (ou seja, se minado for true, logo se estiver minado) retornará 'true'
-		//caso algum vizinho esteja minado, retornará 'false'
-		return vizinhos.stream().noneMatch(v -> v.minado); //noneMatch === nenhum bateu, nenhum item atendeu os requisitos ? true : false
+	public boolean vizinhancaSegura() {
+		// System.out.println(vizinhos.stream().noneMatch(v -> v.minado));
+		// se nenhum vizinho der um match no predicado (ou seja, se minado for true,
+		// logo se estiver minado) retornará 'true'
+		// caso algum vizinho esteja minado, retornará 'false'
+		return vizinhos.stream().noneMatch(v -> v.minado); // noneMatch === nenhum bateu, nenhum item atendeu os
+															// requisitos ? true : false
 	}
-	
+
 	void minar() {
 		minado = true;
 	}
-	
+
 	public boolean isMinado() {
 		return minado;
 	}
-	
+
 	public boolean isMarcado() {
 		return marcado;
 	}
-	
-	
+
 	void setAberto(boolean aberto) {
 		this.aberto = aberto;
-		
+
 		if (aberto) {
-			notificarObservadores(CampoEvento.ABRIR);			
+			notificarObservadores(CampoEvento.ABRIR);
 		}
 	}
 
 	public boolean isAberto() {
 		return aberto;
 	}
-	
+
 	public boolean isFechado() {
 		return !isAberto();
 	}
@@ -126,20 +127,21 @@ public class Campo {
 	public int getColuna() {
 		return coluna;
 	}
-	
+
 	boolean objetivoAlcancado() {
 		boolean desvendado = !minado && aberto;
 		boolean protegido = minado && marcado;
 		return desvendado || protegido;
 	}
-	
-	long minasNaVizinhanca() {
-		return vizinhos.stream().filter(v -> v.minado).count();
+
+	public int minasNaVizinhanca() {
+		return (int) vizinhos.stream().filter(v -> v.minado).count();
 	}
-	
+
 	void reiniciar() {
 		aberto = false;
 		minado = false;
 		marcado = false;
-	}	
+		notificarObservadores(CampoEvento.REINICIAR);
+	}
 }
