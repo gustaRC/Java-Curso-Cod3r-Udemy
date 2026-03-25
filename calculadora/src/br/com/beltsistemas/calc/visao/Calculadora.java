@@ -5,14 +5,13 @@ import java.awt.*;
 
 public class Calculadora extends JFrame {
 
-    private final int width = 332;
-    private final int height = 422;
-
     public Calculadora() {
+        final int WIDTH = 332;
+        final int HEIGHT = 422;
 
         organizarLayout();
 
-        setSize(width, height);
+        setSize(WIDTH, HEIGHT);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setVisible(true);
