@@ -18,7 +18,6 @@ public class RankingJogadoresTeste {
 
     public static void main(String[] args) {
 
-
         Set<Jogador> jogadores = new TreeSet<>(Jogador.comparator);
 
         jogadores.add(new Jogador(2000, "Gustavo"));
