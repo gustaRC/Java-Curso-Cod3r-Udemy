@@ -1,0 +1,29 @@
+package oo.composicao.desafio;
+
+import java.util.ArrayList;
+
+public class Cliente {
+
+	String nome;
+	ArrayList<Compra> compras = new ArrayList<Compra>();
+
+	Cliente(String nome) {
+		this.nome = nome;
+	}
+
+//	set indireto
+	void adicionarCompra(Compra compra) {
+		compra.cliente = this;
+		compras.add(compra);
+	}
+
+	double obterGastoTotal() {
+		double gastoTotal = 0;
+
+		for (Compra compra : compras) {
+			gastoTotal += compra.obterValorTotal();
+		}
+
+		return gastoTotal;
+	}
+}
