@@ -17,6 +17,7 @@ public class CriarBanco {
 
         Statement stmt = conexao.createStatement();
         stmt.execute("CREATE DATABASE IF NOT EXISTS cursoCoder_java");
+        // execute: executa comandos SQL
 
         System.out.println("Banco de dados criado com sucesso!");
         conexao.close();
