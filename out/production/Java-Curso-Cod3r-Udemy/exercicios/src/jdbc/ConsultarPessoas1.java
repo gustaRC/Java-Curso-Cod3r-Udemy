@@ -19,8 +19,6 @@ public class ConsultarPessoas1 {
 
         List<Pessoa> pessoas = new ArrayList<>();
 
-        System.out.println(resultado.getString("nome"));
-
         while(resultado.next()) {
             int codigo = resultado.getInt("id");
             String nome = resultado.getString("nome");
