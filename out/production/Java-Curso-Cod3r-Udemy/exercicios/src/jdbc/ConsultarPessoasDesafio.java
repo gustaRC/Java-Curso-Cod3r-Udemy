@@ -20,7 +20,7 @@ public class ConsultarPessoasDesafio {
         String referenciaNome = "%" + scanner.nextLine().trim() + "%";
 
         String sql = """
-            select * from pessoas where nome like (?);
+            select * from pessoas where nome like ?;
         """;
 
         PreparedStatement stmt = conexao.prepareStatement(sql);
@@ -43,6 +43,7 @@ public class ConsultarPessoasDesafio {
         );
 
         System.out.println("\nConsulta realizada com sucesso!");
+
         scanner.close();
         stmt.close();
         conexao.close();
