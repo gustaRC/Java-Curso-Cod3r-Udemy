@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class ConsultarPessoasDesafio {
-//  DESAFIO: Realizar um scanner para realizar select com "like"para buscar inicio/fim de nomes da tabela pessoas
+//  DESAFIO: Realizar um scanner para realizar select com "like" para buscar inicio/fim de nomes da tabela pessoas
 
     public static void main(String[] args) throws SQLException {
 
