@@ -22,11 +22,15 @@ public class ExcluirPessoa {
         PreparedStatement stmt = conexao.prepareStatement(sql);
         stmt.setInt(1, codigo);
 
-        if (stmt.executeUpdate() > 0) {
+        int contador = stmt.executeUpdate();
+
+        if (contador > 0) {
             System.out.println("Pessoa excluida com sucesso!");
         } else {
             System.out.println("Operação não foi concluída!");
         }
+
+        System.out.println("Linha afetadas: " + contador);
 
         conexao.close();
         scanner.close();
