@@ -6,14 +6,15 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Porteiro {
+//  subject -> quem avisa
 
-	private List<ChegadaAniversarioObservador> observadores = new ArrayList<>();
+	private List<ChegadaAniversarioObservador> observadores = new ArrayList<>(); // armazena para quem avisará
 
 	public void registrarObservador(ChegadaAniversarioObservador obs) {
 		observadores.add(obs);
-	}
+	} // adiciona a lista de armazenamento
 
-	public void monitorar() {
+	public void monitorar() { // motor da aplicação
 		Scanner scanner = new Scanner(System.in);
 
 		String valor = "";
@@ -36,3 +37,8 @@ public class Porteiro {
 		scanner.close();
 	}
 }
+
+/*	PASSO A PASSO DE COMO APLICAR OS OBSERVADORES
+
+
+* */
