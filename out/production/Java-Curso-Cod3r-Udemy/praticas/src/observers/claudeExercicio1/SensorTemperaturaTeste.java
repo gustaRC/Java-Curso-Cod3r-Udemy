@@ -24,9 +24,11 @@ public class SensorTemperaturaTeste {
         do {
             System.out.print("\nDigite a temperatura atual (Celsius): ");
 
+//          CORINGA: quer tratar alguma situação adversa, utilizar o try/catch,
+//          com isso não precisamos fazer mil e uma validações extras.
             try {
                 valorDigitado = scanner.nextLine().trim().replace(",", ".");
-                sensorTemperatura.notifyObservers(Double.parseDouble(valorDigitado));
+                sensorTemperatura.setTemperatura(Double.parseDouble(valorDigitado));
             } catch (NumberFormatException e) {
                 if (!valorDigitado.equalsIgnoreCase("sair")) {
                     System.out.println(">> Valor digitado invalido!");
