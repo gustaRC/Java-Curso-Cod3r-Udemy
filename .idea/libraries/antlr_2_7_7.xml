@@ -1,17 +1,7 @@
 <component name="libraryTable">
   <library name="antlr-2.7.7">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/exercicios-jpa/libs/antlr-2.7.7.jar!/" />
-      <root url="jar://$PROJECT_DIR$/exercicios-jpa/libs/classmate-1.3.0.jar!/" />
-      <root url="jar://$PROJECT_DIR$/exercicios-jpa/libs/dom4j-1.6.1.jar!/" />
-      <root url="jar://$PROJECT_DIR$/exercicios-jpa/libs/hibernate-commons-annotations-5.0.1.Final.jar!/" />
-      <root url="jar://$PROJECT_DIR$/exercicios-jpa/libs/hibernate-core-5.2.11.Final.jar!/" />
-      <root url="jar://$PROJECT_DIR$/exercicios-jpa/libs/javassist-3.20.0-GA.jar!/" />
-      <root url="jar://$PROJECT_DIR$/exercicios-jpa/libs/jboss-logging-3.3.0.Final.jar!/" />
-      <root url="jar://$PROJECT_DIR$/exercicios-jpa/libs/lucene-core-5.5.4.jar!/" />
-      <root url="jar://$PROJECT_DIR$/exercicios-jpa/libs/lucene-queryparser-5.5.4.jar!/" />
       <root url="jar://$PROJECT_DIR$/exercicios-jpa/libs/mysql-connector-j-9.6.0.jar!/" />
-      <root url="jar://$PROJECT_DIR$/exercicios-jpa/libs/xml-apis-1.3.03.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
