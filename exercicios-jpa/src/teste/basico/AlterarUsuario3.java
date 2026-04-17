@@ -7,7 +7,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import java.util.Scanner;
 
-public class AlterarUsuario2 {
+public class AlterarUsuario3 {
 
     public static void main(String[] args) {
 
@@ -19,23 +19,18 @@ public class AlterarUsuario2 {
         long idUsuario = scanner.nextLong();
         scanner.nextLine();
 
-//      em.getTransaction().begin();
+        em.getTransaction().begin();
 
         Usuario usuario = em.find(Usuario.class, idUsuario);
-//      consulta realizada numa transaction/transação,
-//      ou seja, uma entidade no Estado Gerenciado (JPA linkou o valor retornado na consulta do banco de dados com a variável)
+        em.detach(usuario); // DESSINCRONIZAMOS a variável do Estado Gerenciado
+
         System.out.print("Digite o novo nome: ");
         usuario.setNome(scanner.nextLine());
 
         System.out.print("Digite o novo e-mail: ");
         usuario.setEmail(scanner.nextLine());
 
-        //em.merge(usuario); // mesmo conceito do merge no git, é realizado o merge no banco de dados
-        // mesmo que não chamemos o "merge", será realizado as alterações, pois realizamos uma consulta num ambiente transacional,
-        // logo, as entidades estão no Estado Gerenciado.
-        // Mesmo que coloquemos o "em.getTransaction().begin()" depois da consulta, ainda assim o ambiente será transacional com Estado Gerenciado
-
-        em.getTransaction().begin();
+        em.merge(usuario); // agora é necessário realizar o .merge para aplicar as alterações
 
         em.getTransaction().commit();
 
