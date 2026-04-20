@@ -13,14 +13,13 @@ public class Produto {
     @Column(name = "prod_nome", length = 200, nullable = false)
     private String nome;
 
-    @Column(name = "prod_preco", nullable = false, precision = 11 /*número total de digitos*/, scale = 2 /*número de casas decimais*/)
+    @Column(name = "prod_preco", nullable = false, precision = 11 /*número total de dígitos*/, scale = 2 /*número de casas decimais*/)
     private Double preco;
 
     public Produto() {
     }
 
-    public Produto(Long id, String nome, Double preco) {
-        this.id = id;
+    public Produto(String nome, Double preco) {
         this.nome = nome;
         this.preco = preco;
     }

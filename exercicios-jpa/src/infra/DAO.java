@@ -39,6 +39,11 @@ public class DAO<E> {
         return this;
     }
 
+    public DAO<E> fecharConexao() {
+        em.close();
+        return this;
+    }
+
     public DAO<E> incluir(E entidade) {
         em.persist(entidade);
         return this;
