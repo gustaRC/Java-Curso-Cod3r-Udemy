@@ -12,9 +12,12 @@ public class Cliente {
 
     private String nome;
 
-    @OneToOne
+    @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinColumn(name = "assento_id", unique = true) // Mapear coluna com relação entre tabelas - unique impedindo de haver dados duplicados
     private Assento assento;
+
+    public Cliente() {
+    }
 
     public Cliente(String nome, Assento assento) {
         this.nome = nome;
