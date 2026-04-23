@@ -34,7 +34,7 @@
             <property name="hibernate.dialect"
                       value="org.hibernate.dialect.MySQL57Dialect"/>
             <!--EXIBIR SQL USADO-->
-            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.show_sql" value="false"/>
             <!--FORMATA SQL-->
             <property name="hibernate.format_sql" value="true"/>
             <!--A PARTIR DAS CLASSES CRIADAS O HIBERNATE CRIARÁ TABELAS/SCHEMAS NO BANCO DE DADOS-->

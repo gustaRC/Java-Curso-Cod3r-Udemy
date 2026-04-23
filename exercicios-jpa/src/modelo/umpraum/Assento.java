@@ -12,6 +12,9 @@ public class Assento {
 
     private String nome;
 
+    @OneToOne(mappedBy = "assento") // estamos explicitando que o mapemento/relacionamento está sendo feito na classe Cliente e não aqui na classe Assento
+    private Cliente cliente;
+
     public Assento() {
     }
 
@@ -33,5 +36,13 @@ public class Assento {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
     }
 }
