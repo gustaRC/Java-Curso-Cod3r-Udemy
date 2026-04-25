@@ -15,7 +15,7 @@ public class ItemPedido {
     @ManyToOne // Muitos itemPedido para um pedido. Many (itemPedido) To One (pedido)
     private Pedido pedido;
 
-    @ManyToOne // Muitos itemPedido para um produto. Many (itemPedido) To One (produto)
+    @ManyToOne(fetch = FetchType.EAGER) // por padrão no @ManyToOne é EAGER (...ToOne -> EAGER)
     private Produto produto;
 
     @Column(nullable = false)

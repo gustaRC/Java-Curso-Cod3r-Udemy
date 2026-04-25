@@ -16,7 +16,7 @@ public class Pedido {
 
     private String descricao;
 
-    @OneToMany(mappedBy = "pedido")
+    @OneToMany(mappedBy = "pedido", fetch = FetchType.LAZY) // por padrão no @OneToMany é LAZY (...ToMany -> LAZY)
     private List<ItemPedido> itens;
 
     public Pedido() {

@@ -19,13 +19,13 @@ public class ObterClienteAssento {
         daoCliente.fecharConexao();
 
 //      ----------------------- ASSENTO -----------------------
-        DAO<Assento> daoAassento = new DAO<>(Assento.class);
-        idDesejado = 2L;
-        Assento assento = daoAassento.obterPorId(idDesejado);
+//        DAO<Assento> daoAassento = new DAO<>(Assento.class);
+//        idDesejado = 2L;
+//        Assento assento = daoAassento.obterPorId(idDesejado);
+//
+//        System.out.println("Classe Assento - Assento id " + idDesejado + ": " + assento.getNome());
+//        System.out.println("Classe Assento - Cliente do Assento id " + idDesejado + ": " + assento.getCliente().getNome());
 
-        System.out.println("Classe Assento - Assento id " + idDesejado + ": " + assento.getNome());
-        System.out.println("Classe Assento - Cliente do Assento id " + idDesejado + ": " + assento.getCliente().getNome());
-
-        daoAassento.fecharConexao();
+//        daoAassento.fecharConexao();
     }
 }
