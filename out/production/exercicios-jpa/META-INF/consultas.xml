@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings>
+
+    <named-query name="obterFilmesNotaMaiorQue">
+        <!-- LINGUAGEM JPQL-->
+        <query>
+            <!-- NÃO REFERENCIAR o nome da tabela! REFERENCIAR o nome da entidade (nome tabela: filmes, nome entidade: Filme) -->
+            SELECT f FROM Filme f
+            JOIN fetch f.atores
+            WHERE f.nota > :nota <!-- ao colocar um dado com dois pontos (:) refere-se que irá receber dados -->
+        </query>
+    </named-query>
+
+</entity-mappings>
