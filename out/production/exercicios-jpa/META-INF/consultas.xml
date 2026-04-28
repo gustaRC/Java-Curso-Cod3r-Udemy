@@ -6,9 +6,22 @@
         <query>
             <!-- NÃO REFERENCIAR o nome da tabela! REFERENCIAR o nome da entidade (nome tabela: filmes, nome entidade: Filme) -->
             SELECT f FROM Filme f
-            JOIN fetch f.atores
+            JOIN FETCH f.atores
             WHERE f.nota > :nota <!-- ao colocar um dado com dois pontos (:) refere-se que irá receber dados -->
         </query>
     </named-query>
+
+    <named-native-query name="obterMediaGeralFilmes" result-set-mapping="NotaFilmeMap">
+        <!-- LINGUAGEM SQL-->
+        <query>
+            SELECT AVG(nota) AS media FROM filmes
+        </query>
+    </named-native-query>
+
+    <sql-result-set-mapping name="NotaFilmeMap">
+        <constructor-result target-class="modelo.consulta.NotaFilme">
+            <column name="media" class="java.lang.Double" />
+        </constructor-result>
+    </sql-result-set-mapping>
 
 </entity-mappings>

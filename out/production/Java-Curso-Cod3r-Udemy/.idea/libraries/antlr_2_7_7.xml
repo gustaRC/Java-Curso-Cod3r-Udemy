@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="antlr-2.7.7">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/exercicios-jpa/libs/mysql-connector-j-9.6.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

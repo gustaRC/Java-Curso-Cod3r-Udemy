@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac9a67e9-4fa7-4807-908c-d8aa2804acc5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/praticas/src/observers/claudeExercicio2/Comprador.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/praticas/src/observers/claudeExercicio2/Leilao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/praticas/src/observers/claudeExercicio2/LeilaoTeste.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/praticas/src/observers/claudeExercicio2/Leiloeiro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/praticas/src/observers/claudeExercicio2/Observer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/praticas/src/observers/claudeExercicio2/Subject.java" afterDir="false" />
+    <list default="true" id="7bdeb9b4-b33c-42b9-94b6-3b37d96b8b0b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/exercicios-jpa/src/modelo/consulta/NotaFilme.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercicios-jpa/src/teste/consulta/ObterMediaFilmes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercicios-jpa/src/META-INF/consultas.xml" beforeDir="false" afterPath="$PROJECT_DIR$/exercicios-jpa/src/META-INF/consultas.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercicios-jpa/src/infra/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercicios-jpa/src/infra/DAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercicios-jpa/src/teste/consulta/ObterFilmes.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercicios-jpa/src/teste/consulta/ObterFilmes.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,7 +18,7 @@
   </component>
   <component name="CopilotPersistence">
     <persistenceIdMap>
-      <entry key="_C:/Users/Dev2/Desktop/GUSTAVO/Java-Curso-Cod3r-Udemy" value="3BLUs77JX9Pr4gfGHzNN7YxIaTR" />
+      <entry key="_/Users/gustavorodcosta/Documents/projetosJava/Java-Curso-Cod3r-Udemy" value="3BnZieo7SuiaNirpJy0wGiEG5hR" />
     </persistenceIdMap>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -32,13 +31,12 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 3,
+  &quot;associatedIndex&quot;: 5,
   &quot;fromUser&quot;: false
 }</component>
-  <component name="ProjectId" id="3BLUs77JX9Pr4gfGHzNN7YxIaTR" />
+  <component name="ProjectId" id="3BnZieo7SuiaNirpJy0wGiEG5hR" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -48,88 +46,83 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.AlterarUsuario1.executor": "Run",
+    "Application.AlterarUsuario2.executor": "Run",
     "Application.AtualizarRegistroDesafio.executor": "Run",
-    "Application.Calculadora.executor": "Run",
     "Application.ConsultarPessoas1.executor": "Run",
+    "Application.ConsultarPessoasDesafio.executor": "Run",
     "Application.CriarBanco.executor": "Run",
     "Application.CriarTabelaPessoas.executor": "Run",
-    "Application.DAOTeste.executor": "Run",
-    "Application.HistoricoAcessoTeste.executor": "Run",
-    "Application.LeilaoTeste.executor": "Run",
+    "Application.ExcluirPessoa.executor": "Run",
     "Application.NovaPessoa.executor": "Run",
-    "Application.Observador.executor": "Run",
-    "Application.TesteConexao.executor": "Run",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "Application.NovoClienteAssento1.executor": "Run",
+    "Application.NovoClienteAssento2.executor": "Run",
+    "Application.NovoFilmeAtor.executor": "Run",
+    "Application.NovoPedido.executor": "Run",
+    "Application.NovoTioSobrinho.executor": "Run",
+    "Application.NovoUsuario.executor": "Run",
+    "Application.ObterClienteAssento.executor": "Run",
+    "Application.ObterMediaFilmes.executor": "Run",
+    "Application.ObterPedido.executor": "Run",
+    "Application.ObterUsuario.executor": "Run",
+    "Application.ObterUsuarios.executor": "Run",
+    "Application.SensorTemperaturaTeste.executor": "Run",
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "onboarding.tips.debug.path": "C:/Users/Dev2/Desktop/GUSTAVO/Java-Curso-Cod3r-Udemy/calculadora/src/Main.java",
+    "last_opened_file_path": "/Users/gustavorodcosta/Documents/projetosJava/Java-Curso-Cod3r-Udemy/exercicios-jpa",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "/Users/gustavorodcosta/Documents/projetosJava/Java-Curso-Cod3r-Udemy/exercicios-jpa/src/Main.java",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
+    "project.structure.side.proportion": "0.2908046",
     "settings.editor.selected.configurable": "preferences.keymap"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
       "mysql"
-    ],
-    "com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect": [
-      "MySQL"
     ]
   }
 }]]></component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Dev2\Desktop\GUSTAVO\Java-Curso-Cod3r-Udemy\exercicios\libs" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/exercicios-jpa" />
     </key>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.32098.37" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ac9a67e9-4fa7-4807-908c-d8aa2804acc5" name="Changes" comment="" />
-      <created>1774268048746</created>
+      <changelist id="7bdeb9b4-b33c-42b9-94b6-3b37d96b8b0b" name="Changes" comment="" />
+      <created>1775126928699</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1774268048746</updated>
+      <updated>1775126928699</updated>
     </task>
     <servers />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/untitled/src/Main.java</url>
-          <line>11</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.RuntimeException" package="java.lang" />
-          <option name="timeStamp" value="6" />
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="1" />
         </breakpoint>
       </breakpoints>
+      <default-breakpoints>
+        <breakpoint enabled="true" type="java-exception" />
+      </default-breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

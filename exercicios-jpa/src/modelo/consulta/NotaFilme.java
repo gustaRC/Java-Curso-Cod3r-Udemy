@@ -1,0 +1,19 @@
+package modelo.consulta;
+
+// NÃO É UMA ENTIDADE
+public class NotaFilme {
+
+    private double media;
+
+    public NotaFilme(double media) {
+        this.media = media;
+    }
+
+    public double getMedia() {
+        return media;
+    }
+
+    public void setMedia(double media) {
+        this.media = media;
+    }
+}
