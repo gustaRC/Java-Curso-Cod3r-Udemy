@@ -1,4 +1,23 @@
 package modelo.heranca.joined;
 
-public class PessoaJoined {
+import javax.persistence.*;
+
+@Entity
+@Inheritance(strategy = InheritanceType.JOINED) //uma tabela para cada classe, com uma coluna (FK) para identificar o tipo de classe
+@Table(name = "pessoas_heranca_joined")
+public abstract class PessoaJoined {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String nome;
+    private String tipo;
+
+    public PessoaJoined() {
+    }
+
+    public PessoaJoined(String nome) {
+        this.nome = nome;
+    }
 }
