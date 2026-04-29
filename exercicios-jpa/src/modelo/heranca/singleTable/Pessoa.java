@@ -5,7 +5,7 @@ import javax.persistence.*;
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE) //uma tabela para todas as classes, com uma coluna para identificar o tipo de classe
 @DiscriminatorColumn(name = "tipo" ,discriminatorType = DiscriminatorType.STRING) //coluna para identificar o tipo de classe, com o nome "tipo" e o tipo STRING
-@Table(name = "pessoas_heranca")
+@Table(name = "pessoas_heranca_singlepage")
 public abstract class Pessoa {
 
     @Id

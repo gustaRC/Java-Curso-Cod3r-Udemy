@@ -23,10 +23,10 @@ public class PessoaFisicaJuridicaTeste {
         Pessoa j2 = new Juridica("Empresa Y", "12.345.678/0001-00");
 
         DAO<Pessoa> dao = new DAO<>(Pessoa.class);
-//        dao.incluirAtomico(f1);
-//        dao.incluirAtomico(f2);
-//        dao.incluirAtomico(j1);
-//        dao.incluirAtomico(j2);
+        dao.incluirAtomico(f1);
+        dao.incluirAtomico(f2);
+        dao.incluirAtomico(j1);
+        dao.incluirAtomico(j2);
 
         List<Pessoa> pessoas = new ArrayList<Pessoa>();
         pessoas = dao.obterTodos();
