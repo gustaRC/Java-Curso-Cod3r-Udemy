@@ -22,9 +22,9 @@
         <class>modelo.composicao.Endereco</class>
         <class>modelo.composicao.Fornecedor</class>
         <class>modelo.composicao.Funcionario</class>
-        <class>modelo.heranca.singleTable.Fisica</class>
-        <class>modelo.heranca.singleTable.Juridica</class>
-        <class>modelo.heranca.singleTable.Pessoa</class>
+        <class>modelo.heranca.singleTable.FisicaSinglePage</class>
+        <class>modelo.heranca.singleTable.JuridicaSinglePage</class>
+        <class>modelo.heranca.singleTable.PessoaSinglePage</class>
 
 <!--        <mapping-file>META-INF/consultas.xml</mapping-file>-->
 

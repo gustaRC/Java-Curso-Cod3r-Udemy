@@ -5,17 +5,17 @@ import javax.persistence.Entity;
 
 @Entity
 @DiscriminatorValue("FISICA")
-public class Fisica extends Pessoa {
+public class FisicaSinglePage extends PessoaSinglePage {
 //  Todos os atributos serão nullable, ou seja, podem ser nulos,
 //  mesmo que tentemos forçar o seu preenchimento, ainda assim será sem sucesso.
 
     private String cpf;
 
-    public Fisica() {
+    public FisicaSinglePage() {
         super();
     }
 
-    public Fisica(String nome, String cpf){
+    public FisicaSinglePage(String nome, String cpf){
         super(nome);
         this.cpf = cpf;
     }
