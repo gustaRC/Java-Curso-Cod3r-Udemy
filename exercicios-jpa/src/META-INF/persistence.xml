@@ -19,6 +19,9 @@
         <class>modelo.muitosparamuitos.Sobrinho</class>
         <class>modelo.muitosparamuitos.Ator</class>
         <class>modelo.muitosparamuitos.Filme</class>
+        <class>modelo.composicao.Endereco</class>
+        <class>modelo.composicao.Fornecedor</class>
+        <class>modelo.composicao.Funcionario</class>
 
 <!--        <mapping-file>META-INF/consultas.xml</mapping-file>-->
 
