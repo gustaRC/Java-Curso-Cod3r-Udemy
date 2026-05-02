@@ -12,12 +12,23 @@ public abstract class PessoaJoined {
     private Long id;
 
     private String nome;
-    private String tipo;
 
     public PessoaJoined() {
     }
 
     public PessoaJoined(String nome) {
+        this.nome = nome;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
         this.nome = nome;
     }
 }

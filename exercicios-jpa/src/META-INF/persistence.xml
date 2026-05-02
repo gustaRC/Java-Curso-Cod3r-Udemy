@@ -25,6 +25,9 @@
         <class>modelo.heranca.singleTable.FisicaSinglePage</class>
         <class>modelo.heranca.singleTable.JuridicaSinglePage</class>
         <class>modelo.heranca.singleTable.PessoaSinglePage</class>
+        <class>modelo.heranca.joined.PessoaJoined</class>
+        <class>modelo.heranca.joined.FisicaJoined</class>
+        <class>modelo.heranca.joined.JuridicaJoined</class>
 
 <!--        <mapping-file>META-INF/consultas.xml</mapping-file>-->
 
