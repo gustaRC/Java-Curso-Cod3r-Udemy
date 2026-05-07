@@ -7,7 +7,8 @@ import javax.persistence.*;
 public abstract class JogadorTablePerClass {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE) // Devido ao Table Per Class o id precisa ser AUTO ou SEQUENCE (Recomendado SEQUENCE)
+    // pois o ID precisa ser único entre todas as tabelas da hierarquia, caso contrário ocorrerá conflito ao buscar as heranças da classe com UNION do JPA
     private Long id;
 
     private String nome;
