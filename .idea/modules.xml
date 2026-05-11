@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/Java-Curso-Cod3r-Udemy.iml" filepath="$PROJECT_DIR$/.idea/Java-Curso-Cod3r-Udemy.iml" />
       <module fileurl="file://$PROJECT_DIR$/app.calculo/app.calculo.iml" filepath="$PROJECT_DIR$/app.calculo/app.calculo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app.financeiro/app.financeiro.iml" filepath="$PROJECT_DIR$/app.financeiro/app.financeiro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app.logging/app.logging.iml" filepath="$PROJECT_DIR$/app.logging/app.logging.iml" />
       <module fileurl="file://$PROJECT_DIR$/calculadora/calculadora.iml" filepath="$PROJECT_DIR$/calculadora/calculadora.iml" />
       <module fileurl="file://$PROJECT_DIR$/exercicios-jpa/exercicios-jpa.iml" filepath="$PROJECT_DIR$/exercicios-jpa/exercicios-jpa.iml" />
     </modules>

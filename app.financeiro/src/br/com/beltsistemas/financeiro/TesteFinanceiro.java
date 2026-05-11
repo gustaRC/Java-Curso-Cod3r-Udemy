@@ -8,5 +8,7 @@ public class TesteFinanceiro {
 
         Calculadora calculadora = new Calculadora();
         System.out.println(calculadora.soma(2, 5, 3));
+
+        Calculadora.getLoggerClass();
     }
 }
