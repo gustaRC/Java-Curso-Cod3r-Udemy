@@ -1,14 +1,15 @@
 package br.com.beltsistemas.calculo;
 
+import br.com.beltsistemas.app.Calculadora;
 import br.com.beltsistemas.calculo.interno.OperacoesAritmeticas;
 import br.com.beltsistemas.logger.Logger;
 
-public class Calculadora {
+public class CalculadoraImpl implements Calculadora {
 
     private OperacoesAritmeticas opAritmeticas = new OperacoesAritmeticas();
 
     public double soma(double... nums) { // delegate methods
-        Logger.info("Somando...");
+        Logger.info("Somando... ");
         return opAritmeticas.soma(nums);
     }
 
