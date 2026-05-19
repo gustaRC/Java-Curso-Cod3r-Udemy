@@ -1,9 +1,6 @@
 package br.com.beltsistemas.exerciciosSB.controllers;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController //declaramos a classe como um controller do tipo Rest
 public class PrimeiroController {
@@ -17,6 +14,11 @@ public class PrimeiroController {
 
     @GetMapping(path = { "ola2", "saudacao" }) //GetMapping exclusivo para método GET
     public String ola2() {
+        return "Olá Spring Boot 2!";
+    }
+
+    @PostMapping(path = "saudacao") // permitido duplicação por causa do tipo HTTP diferente
+    public String saudacao() {
         return "Olá Spring Boot 2!";
     }
 }
