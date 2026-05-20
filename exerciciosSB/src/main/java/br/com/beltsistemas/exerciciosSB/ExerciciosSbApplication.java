@@ -9,10 +9,10 @@ import java.util.Map;
 public class ExerciciosSbApplication {
 
 	public static void main(String[] args) {
-		// SpringApplication.run(ExerciciosSbApplication.class, args);
-		SpringApplication app = new SpringApplication(ExerciciosSbApplication.class);
-		app.setDefaultProperties(Map.of("server.port", "8081"));
-		app.run(args);
+		SpringApplication.run(ExerciciosSbApplication.class, args);
+//		SpringApplication app = new SpringApplication(ExerciciosSbApplication.class);
+//		app.setDefaultProperties(Map.of("server.port", "8081"));
+//		app.run(args);
 	}
 
 }
