@@ -2,8 +2,10 @@ package br.com.beltsistemas.exerciciosSB.model.repository;
 
 import br.com.beltsistemas.exerciciosSB.model.entities.Produto;
 import jakarta.validation.constraints.NotBlank;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.data.repository.query.Param;
 
 //CrudRepository<[Classe_Base], [Tipo_Identificador]>
 public interface ProdutoRepository extends PagingAndSortingRepository<Produto, Integer>, CrudRepository<Produto, Integer> {
@@ -19,4 +21,18 @@ public interface ProdutoRepository extends PagingAndSortingRepository<Produto, I
 //  'findBy' -> Encontrar/Procurar/GEt/Select
 //  'Containing' -> Contenha/Pertence
 //  'IgnoreCase' -> Ignorar caixa alta
+
+//   OUTRAS CONVENÇÕES PARA PESQUISA DE STRING:
+//   findByNomeContaining
+//   findByNomeIsContaining
+//   findByNomeContains
+
+//   findByNomeStartsWith
+//   findByNomeEndsWith
+
+//   findByNomeNotContaining
+
+//  UTILIZANDO UMA QUERY:
+    @Query("SELECT p FROM Produto p WHERE p.nome LIKE %:nome%")
+    public Iterable<Produto> searchByNameLike(@Param("nome") String nome);
 }
