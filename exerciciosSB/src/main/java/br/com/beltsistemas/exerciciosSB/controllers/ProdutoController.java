@@ -3,6 +3,7 @@ package br.com.beltsistemas.exerciciosSB.controllers;
 import br.com.beltsistemas.exerciciosSB.model.entities.Produto;
 import br.com.beltsistemas.exerciciosSB.model.repository.ProdutoRepository;
 import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotBlank;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -27,6 +28,11 @@ public class ProdutoController {
     @GetMapping
     public Iterable<Produto> obterProdutos() {
         return produtoRepository.findAll(); //Retornará TODOS os produtos. Se tiver 1000 produtos, irá trazer os 1000
+    }
+
+    @GetMapping("nome")
+    public Iterable<Produto> obterProdutosPorNome(@RequestParam @NotBlank String nome) {
+        return produtoRepository.findByNomeContainingIgnoreCase(nome);
     }
 
     @GetMapping("paginas/{pag}/{qtde_itens}")

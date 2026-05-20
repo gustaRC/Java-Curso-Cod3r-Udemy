@@ -1,6 +1,7 @@
 package br.com.beltsistemas.exerciciosSB.model.repository;
 
 import br.com.beltsistemas.exerciciosSB.model.entities.Produto;
+import jakarta.validation.constraints.NotBlank;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
@@ -10,4 +11,12 @@ public interface ProdutoRepository extends PagingAndSortingRepository<Produto, I
 
 //  CrudRepository -> CRUD
 //  PagingAndSortingRepository -> paginação para consulta no banco de dados
+
+//  'findBy'_AtributoExplicito_'Containing''IgnoreCase'
+    public Iterable<Produto> findByNomeContainingIgnoreCase(@NotBlank String nome);
+//  Procurará pelo nome que contenha o que foi passado. Parâmetro: Can, Resultado: Caneta Preta, Caneta Vermelha
+//  Isso somente será possivel graças a convenção do Spring Boot, logo, se não seguirmos a convenção ocorrerá ERRO
+//  'findBy' -> Encontrar/Procurar/GEt/Select
+//  'Containing' -> Contenha/Pertence
+//  'IgnoreCase' -> Ignorar caixa alta
 }
