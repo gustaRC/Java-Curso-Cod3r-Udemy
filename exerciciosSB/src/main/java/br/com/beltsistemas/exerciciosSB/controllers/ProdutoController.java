@@ -5,6 +5,8 @@ import br.com.beltsistemas.exerciciosSB.model.repository.ProdutoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.math.BigDecimal;
+
 @RestController
 @RequestMapping("api/produtos")
 public class ProdutoController {
@@ -14,8 +16,12 @@ public class ProdutoController {
 
     @PostMapping
 //  completamente opcional o @ResponseBody, diz que o retorno será no body da requisição e não no header, por exemplo
-    public @ResponseBody Produto novoProduto(@RequestParam String nome) {
-        Produto produto = new Produto(nome);
+    public @ResponseBody Produto novoProduto(
+            @RequestParam String nome,
+            @RequestParam double preco,
+            @RequestParam double desc
+        ) {
+        Produto produto = new Produto(nome, new BigDecimal(preco), desc);
         produtoRepository.save(produto);
         return produto;
     }
