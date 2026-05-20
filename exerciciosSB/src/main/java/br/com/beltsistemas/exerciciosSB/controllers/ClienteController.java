@@ -1,10 +1,7 @@
 package br.com.beltsistemas.exerciciosSB.controllers;
 
 import br.com.beltsistemas.exerciciosSB.models.Cliente;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(path = "clientes") //Todos os paths do controller será precedido pela palavra "clientes". Resultado: "localhost:8080/clientes/qualquer"
@@ -23,5 +20,10 @@ public class ClienteController {
     @GetMapping("{id}") //path = "/clientes/[:ID]"
     public Cliente obterClientePorId(@PathVariable int id) { //converterá o valor digitado para int
         return new Cliente(id, "Biricubico e Siricuticu", "123.456.789-00");
+    }
+
+    @GetMapping //== /clientes?id=[NUM]
+    public Cliente obterClientePorId2(@RequestParam(name = "id", defaultValue = "999") int id) { //agora não mais será um PathVariable, mas sim um RequestParam
+        return new Cliente(id, "Teste Testado", "999.999.999-99");
     }
 }
