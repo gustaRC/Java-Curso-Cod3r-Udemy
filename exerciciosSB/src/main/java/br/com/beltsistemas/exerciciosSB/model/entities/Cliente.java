@@ -1,4 +1,4 @@
-package br.com.beltsistemas.exerciciosSB.models;
+package br.com.beltsistemas.exerciciosSB.model.entities;
 
 public class Cliente {
 

@@ -1,6 +1,6 @@
 package br.com.beltsistemas.exerciciosSB.controllers;
 
-import br.com.beltsistemas.exerciciosSB.models.Cliente;
+import br.com.beltsistemas.exerciciosSB.model.entities.Cliente;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
