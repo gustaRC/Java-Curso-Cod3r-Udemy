@@ -15,9 +15,9 @@ public class ProdutoController {
     @Autowired //criará um objeto automaticamente
     private ProdutoRepository produtoRepository;
 
-    @PostMapping
+    @RequestMapping(method = { RequestMethod.POST, RequestMethod.PUT })
 //  completamente opcional o @ResponseBody, diz que o retorno será no body da requisição e não no header, por exemplo
-    public @ResponseBody Produto novoProduto(@Valid Produto produto) {
+    public @ResponseBody Produto salvarProduto(@Valid Produto produto) {
         produtoRepository.save(produto);
         return produto;
     }
@@ -30,5 +30,10 @@ public class ProdutoController {
     @GetMapping("{id}")
     public Optional<Produto> obterProdutoPorId(@PathVariable int id) {
         return produtoRepository.findById(id);
+    }
+
+    @DeleteMapping("{id}")
+    public void excluirProduto(@PathVariable int id) {
+        produtoRepository.deleteById(id);
     }
 }
